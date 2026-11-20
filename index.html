@@ -14,11 +14,9 @@ h1{font-size:1.6rem;margin:12px 0 8px;}
 .lead{color:var(--muted);font-size:1.05rem;margin-bottom:24px;}
 .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:20px;}
 .price{font-size:1.3rem;font-weight:700;color:var(--accent);}
-label{display:block;font-weight:600;margin:14px 0 6px;}
-textarea,input{width:100%;padding:12px;border-radius:10px;border:1px solid var(--border);background:var(--bg);color:var(--text);font-size:1rem;}
-button{margin-top:18px;width:100%;padding:14px;border:none;border-radius:10px;background:var(--accent);color:#fff;font-size:1.05rem;font-weight:600;cursor:pointer;}
 .badge{display:inline-block;background:var(--accent);color:#fff;border-radius:999px;padding:4px 12px;font-size:.8rem;font-weight:600;margin-bottom:10px;}
-.hint{color:var(--muted);font-size:.85rem;margin-top:10px;}
+a.cta{display:block;text-align:center;margin-top:18px;width:100%;padding:14px;border:none;border-radius:10px;background:var(--accent);color:#fff;font-size:1.05rem;font-weight:600;text-decoration:none;}
+.hint{color:var(--muted);font-size:.85rem;margin-top:10px;text-align:center;}
 </style>
 </head>
 <body>
@@ -34,32 +32,10 @@ button{margin-top:18px;width:100%;padding:14px;border:none;border-radius:10px;ba
 </div>
 
 <div class="card">
-<form id="demoForm">
-<label for="p1">Stichpunkt 1</label>
-<input id="p1" placeholder="z. B. Garten 80m2">
-<label for="p2">Stichpunkt 2</label>
-<input id="p2" placeholder="z. B. Hecke schneiden">
-<label for="p3">Stichpunkt 3</label>
-<input id="p3" placeholder="z. B. Rasen vertikutieren">
-<label for="contact">Deine E-Mail oder Telefonnummer</label>
-<input id="contact" placeholder="Fur die Ruckmeldung mit deinem Beispiel">
-<button type="submit">Kostenloses Beispiel anfragen</button>
-<p class="hint">Oeffnet dein E-Mail-Programm mit einer vorausgefuellten Nachricht.</p>
-</form>
+<p>Trag deine 3 Stichpunkte ein und bekomme dein kostenloses Beispiel-Angebot:</p>
+<a class="cta" href="https://docs.google.com/forms/d/12ywjSXMzOZ9mOm2tmUA7ER2TJvpxmc430ZimXVR11ZQ/viewform" target="_blank" rel="noopener">Kostenloses Beispiel anfragen</a>
+<p class="hint">Oeffnet das Anfrage-Formular &middot; dauert 1 Minute</p>
 </div>
 </div>
-<script>
-document.getElementById('demoForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  var p1 = document.getElementById('p1').value;
-  var p2 = document.getElementById('p2').value;
-  var p3 = document.getElementById('p3').value;
-  var contact = document.getElementById('contact').value;
-  var subject = 'Anfrage: KI-Angebots-Beschleuniger';
-  var body = 'Stichpunkt 1: ' + p1 + '\n' + 'Stichpunkt 2: ' + p2 + '\n' + 'Stichpunkt 3: ' + p3 + '\n' + 'Kontakt: ' + contact;
-  var mailto = 'mailto:sakurachris0@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-  window.location.href = mailto;
-});
-</script>
 </body>
 </html>
